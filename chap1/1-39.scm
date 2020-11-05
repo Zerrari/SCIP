@@ -1,0 +1,7 @@
+(define (square x) (* x x))
+(define (tan-cf x k)
+  (define (compute x k result)
+  (cond ((= k 1) (/ (- 1 result) x))
+	(else (compute x (- k 2) (- 1 (/ (square x) result))))))
+  (define result (/ (square x) x))
+  (compute x k result))

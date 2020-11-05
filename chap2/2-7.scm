@@ -1,0 +1,6 @@
+(define (make-interval upper lower)
+  (cons lower upper))
+(define (upper-bound)
+  (car interval))
+(define (lower-bound)
+  (cdr interval))

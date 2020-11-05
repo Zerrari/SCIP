@@ -1,0 +1,11 @@
+(define (sum term a next b)
+  (if (> a b)
+      0
+      (+ (term b)
+	 (sum term (next a) next b))))
+(define (f x) (* x x x))
+(define (integral f a b n)
+  (define h (/ (- b a) n))
+  (define (add a) (+ a b))
+  (* (sum f a add b)
+     (/ h 3.0)))

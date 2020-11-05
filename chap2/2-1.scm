@@ -1,0 +1,8 @@
+(define (make-ret n d)
+  (if (< d 0)
+      (cons (- 0 n) (- 0 d))
+      (cons n d)))
+(define (print x)
+  (display (car x))
+  (newline)
+  (display (cdr x)))
